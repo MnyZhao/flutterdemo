@@ -26,7 +26,7 @@ class AnimationConState extends State<AnimationCon> {
           child: Column(
             children: <Widget>[
               new AnimatedContainer(
-                curve: Curves.bounceOut,
+                curve: Curves.fastOutSlowIn,
                 duration: new Duration(seconds: 3),
                 child: new FlutterLogo(size: 100.0,),
                 padding: EdgeInsets.only(bottom: animValue),
@@ -42,4 +42,7 @@ class AnimationConState extends State<AnimationCon> {
       ),
     );
   }
+}
+void main() {
+  runApp(AnimationCon());
 }

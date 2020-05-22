@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/**
+ * AnimationBuilder 继承自AnimationWidget 它将显示部分和动画部分分离 方便给特定的view
+ * 添加具体的动画
+ *
+ */
 class AnimatedImages extends AnimatedWidget {
   AnimationController controller;
 

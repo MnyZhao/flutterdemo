@@ -8,8 +8,14 @@ import 'package:flutter/material.dart';
 class AnimatedImages extends AnimatedWidget {
   AnimationController controller;
 
-  AnimatedImages({Key key, Animation<double> animation, this.controller})
-      : super(key: key, listenable: animation);
+//  AnimatedImages({Key key, Animation<double> animation, this.controller})
+//      : super(key: key, listenable: animation);
+//
+  AnimatedImages(
+      {Key key, Animation<double> animation, AnimationController controller})
+      : super(key: key, listenable: animation) {
+    this.controller = controller;
+  }
 
   @override
   Widget build(BuildContext context) {

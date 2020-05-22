@@ -2,7 +2,7 @@ import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 
 /**
- * 动画并行
+ * 动画并行 透明度和缩放
  */
 class AnimatedLogo extends AnimatedWidget {
   // The Tweens are static because they don't change.

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 class GetUserInfo extends StatelessWidget {
   String _text;
 
+  // 用async 标记的函数返回类型必须是future
   Future<String> getHttp() async {
     try {
       //创建一个HttpClient
@@ -13,8 +14,8 @@ class GetUserInfo extends StatelessWidget {
       //打开Http连接
 //      HttpClientRequest request = await httpClient
 //          .getUrl(Uri.parse("https://www.baidu.com")) as HttpClientRequest;
-      HttpClientRequest request = await httpClient
-          .getUrl(Uri.parse("https://api.github.com/users/flyou")) as HttpClientRequest;
+      HttpClientRequest request = await httpClient.getUrl(
+          Uri.parse("https://api.github.com/users/flyou")) as HttpClientRequest;
 //      //使用iPhone的UA
 //      request.headers.add("user-agent",
 //          "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1");
@@ -34,6 +35,7 @@ class GetUserInfo extends StatelessWidget {
 //        _loading = false;
 //      });
     }
+    return _text;
   }
 
   @override
