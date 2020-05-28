@@ -2,7 +2,11 @@ void main() {
   //捕获异常可以使用 on 或 catch 或者同时使用:
   try {
     doubleToInt();
-  } on FormatException catch (e) {
+  } on FormatException {
+    // 具体异常指定具体操作
+    print("FormatException");
+  } catch (e) {
+    // 所有异常捕获
     print(e);
   } finally {
     print(double.parse("3.14").toString() + "   ->finally");

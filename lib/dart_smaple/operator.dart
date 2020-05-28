@@ -50,18 +50,17 @@ void main() {
   print('>>>>>>>>>>>>>赋值');
   var b;
   b ??= 'value'; //??=如果b为空则将value 赋值给b;
-  print(b);//输出b为value
-  print(b ?? 'jack');//?? 如果b为空 则输出jack 否则输出b
+  print(b); //输出b为value
+  print(b ?? 'jack'); //?? 如果b为空 则输出jack 否则输出b
   if (b == 'value') {
     print(b == 'value');
-  };
-  var c;
-  var bar='12';
-  c?.bar;// ?. 避免左边表达式为空值导致的异常 c不为空返回bar 为空返回null
-  print((c?.bar).toString());//输出null
+  }
+//  ?. 避免左边表达式为空值导致的异常 c不为空返回bar 为空返回null
+  var ps=new Person("firstName");
+  Person ps1;
+  print(ps?.firstName);
+  print(ps1?.firstName);
 
-
-  
   print('>>>>>>>>>>>>>if语句');
   int i = 0;
   if (i < 0) {
@@ -75,7 +74,7 @@ void main() {
   var list = ['s', 'a', 'v', 'e'];
   print('>>>>常规for循环');
   for (int i = 0; i < list.length; i++) {
-    print(list[i].toString());
+    print(list[i]);
   }
 //  element(var f){
 //    print(f.toString());

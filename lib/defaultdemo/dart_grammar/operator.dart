@@ -18,6 +18,7 @@ void main() {
   print(5 / 2); //正常除法
   print(5 ~/ 2); //取整
   print(5 % 2); //取余
+  print(-(5-3));
   /*判断对象类型用 is 或 is! 操作符，使用 as 操作符进行类型转换:*/
   /**
    * is 表示是
@@ -56,7 +57,7 @@ void main() {
     print(b == 'value');
   };
   var c;
-  
+
   print('>>>>>>>>>>>>>if语句');
   int i = 0;
   if (i < 0) {

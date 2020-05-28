@@ -10,7 +10,7 @@ void main() {
   print(sayHelloL('lambda'));
   print('>>>>>>>>>>>>>>>匿名函数');
   print(sayHelloN('匿名'));
-  /*匿名函数直接表示版本*/
+  /*匿名函数*/
   var listN = ['apples', 'banners', 'orange'];
   listN.forEach((item) {
     print('${listN.indexOf(item)}:$item');
@@ -81,8 +81,8 @@ sayHelloV(name) {
 sayHelloL(name) => 'Hello $name';
 /*也可以用来定义匿名函数*/
 var sayHelloN = (name) => 'hello $name';
-
 /**
+ * Function 函数类型
  * 函数闭包（closure）就是一个函数对象可以访问它词法作用域内的变量
  * ，即使这个函数在原始范围外被使用。
  * 例如，下面的例子，subMake() 会捕获 addBy. 无论他返回的函数在哪，他都会记住 addBy:
@@ -97,7 +97,7 @@ Function subMake(num addBy) {
  * 可选的命名参数调用函数时可以指定命名参数
  * 与顺序无关 在调用函数的时候需要指明参数名
  * 例如paramName:value
- * 定义函数时用{}包裹
+ * 定义函数参数时用`{}`包裹
  * {param1,param2...}
  * 可以指定类型 也可以不指定类型
  * 默认值用: 新版本支持 =
@@ -113,6 +113,7 @@ void enableFlags({bool param1, String param2 = '2', @required param3}) {
 /**
  * 可选的位置参数
  * 参数值依次赋值 与顺序有关
+ * 定义函数参数时用`[]`包裹
  * 同样可以指定参数类型也可以不指定参数类型
  * 默认值用=
  * 没有赋值 值为null

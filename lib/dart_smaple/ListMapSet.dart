@@ -13,7 +13,7 @@ void main() {
     'key3': 'value3',
   };
 //  mapv.map(((item,int)=>item)
-//  mapAdd(mapv, "1", "2");
+  mapAdd(mapv, "1", "2");
   mapv.forEach((k, v) {
     print(k + v);
   });
@@ -27,7 +27,6 @@ void main() {
   setv.add(4);
   setv.add(5);
   setv.add(6);
-
   setAdd(8, setv);
 }
 
@@ -48,6 +47,9 @@ void reset(List list) {
  */
 void printv(List list) {
   list.forEach((dynamic i) => print(i));
+  list.forEach((i) {
+    print(i);
+  });
   print("foreach输出");
 }
 
@@ -77,6 +79,10 @@ void mapTraver(Map map) {
     print(map[itKeys.current]);
   }
   print("循环遍历Map");
+  Iterator itValues = map.values.toList().iterator;
+  while (itValues.moveNext()) {
+    print(itValues.current);
+  }
 }
 
 /**
@@ -99,4 +105,7 @@ void setAdd(var i, Set se) {
   while (it.moveNext()) {
     print(it.current);
   }
+  se.forEach((i){
+    print(i);
+  });
 }
