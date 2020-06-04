@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterdemo/defaultdemo/base/BaseAppbar.dart';
 
 /**
- * 受约束的盒子 和 有大小的盒子
+ * 受约束的盒子ConstrainedBox 和 有大小的盒子BoxConstraints
  */
 class ConstrainedBoxSizeBox extends StatelessWidget {
   @override

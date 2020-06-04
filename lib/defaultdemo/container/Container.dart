@@ -8,6 +8,8 @@ class MContainer extends StatelessWidget {
     return Container(
       width: 200.0,
       height: 200.0,
+      //color 在源码中也是转换成decoration设置的 用了decoration color 设置无效
+//      color: Colors.amber,
       //背景
       decoration: BoxDecoration(
         gradient: RadialGradient(

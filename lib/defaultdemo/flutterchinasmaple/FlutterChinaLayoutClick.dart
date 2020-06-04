@@ -78,11 +78,11 @@ class Title01LayoutState extends State<TitleO1Layot> {
               children: <Widget>[
                 Container(
                   padding: EdgeInsets.only(bottom: 8.0),
-                  child: Text('Oeschinen Lake Campground',
-                      style: new TextStyle(
-                        fontWeight: FontWeight.bold,
-                      )),
-                ),
+      child: Text('Oeschinen Lake Campground',
+          style: new TextStyle(
+            fontWeight: FontWeight.bold,
+          )),
+    ),
                 Text('Kandersteg, Switzerland',
                     style: new TextStyle(
                       color: Colors.grey[500],

@@ -31,7 +31,7 @@ class MHeader extends StatelessWidget {
             fit: BoxFit.fill,
             width: double.infinity,
           ),*/
-          Align(
+          Align(//它可以将其子widget对齐，并可以根据子widget的大小自动调整大小。
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
