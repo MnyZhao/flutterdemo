@@ -31,42 +31,31 @@ class bannerState extends State<banner> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return SizedBox(
-        width: 30,
-        height: 30,
+    return Container(
+        color: Colors.greenAccent,
+        height: 180,
         child: Stack(
+          alignment: Alignment.bottomCenter,
           children: <Widget>[
             PageView.builder(
               onPageChanged: (num) {
                 setState(() {
-                  //这不应该是没更新一次状态就重新添加一个点集合 而是应该对应状态进行修改
-                  // 后面有时间在完善
                   listDoats = DoasIndicator(list.length, num);
                 });
               },
               controller: _controller,
               itemBuilder: (BuildContext context, int num) {
-                return SizedBox(
-                    width: 30,
-                    height: 20,
-                    child: Image(
-                      height: 20,
-                      image: AssetImage(list[num]),
-                      fit: BoxFit.none, //缩放模式
-                    ));
+                return Image(
+                  image: AssetImage(list[num]),
+                  fit: BoxFit.cover, //缩放模式
+                );
               },
               itemCount: list.length,
             ),
             Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
               bottom: 5,
-              child: Center(
-                child: Row(
-                  children:
-                      listDoats, //DoasIndicator(list.length, currentIndex),
-                ),
+              child: Row(
+                children: listDoats, //DoasIndicator(list.length, currentIndex),
               ),
             )
           ],
@@ -98,10 +87,10 @@ class Dots extends StatelessWidget {
   Color unSelectColor;
 
   Dots.config(
-    bool check, {
-    Color selectColor = Colors.grey,
-    Color unSelectColor = Colors.redAccent,
-  }) {
+      bool check, {
+        Color selectColor = Colors.grey,
+        Color unSelectColor = Colors.redAccent,
+      }) {
     this.isCheck = check;
     this.selectColor = selectColor;
     this.unSelectColor = unSelectColor;
@@ -121,7 +110,6 @@ class Dots extends StatelessWidget {
     );
   }
 }
-
 Widget banners = Scaffold(
   appBar: getAppBar("banner"),
   body: banner(),
