@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/utils.dart';
 
 /**
  * CustomScrollView是可以使用sliver来自定义滚动模型（效果）的widget。
@@ -7,7 +8,7 @@ import 'package:flutter/material.dart';
  * 如果使用GridView+ListView来实现的话，就不能保证一致的滑动效果，
  * 因为它们的滚动效果是分离的， 所以这时就需要一个"胶水"，
  * 把这些彼此独立的可滚动widget（Sliver）"粘"起来，而CustomScrollView的功能就相当于“胶水”。
- *
+ *3
  * 示例是一个material风格的界面
  */
 class MCustomScroller extends StatelessWidget {
@@ -24,13 +25,16 @@ class MCustomScroller extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
               title: const Text('Demo'),
               background: Image.asset(
-                "./images/leak.jpg", fit: BoxFit.cover,),
+                "./images/leak.jpg",
+                fit: BoxFit.cover,
+              ),
             ),
           ),
 
           SliverPadding(
             padding: const EdgeInsets.all(8.0),
-            sliver: new SliverGrid( //Grid
+            sliver: new SliverGrid(
+              //Grid
               gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, //Grid按两列显示
                 mainAxisSpacing: 10.0,
@@ -38,7 +42,7 @@ class MCustomScroller extends StatelessWidget {
                 childAspectRatio: 4.0,
               ),
               delegate: new SliverChildBuilderDelegate(
-                    (BuildContext context, int index) {
+                (BuildContext context, int index) {
                   //创建子widget
                   return new Container(
                     alignment: Alignment.center,
@@ -54,22 +58,26 @@ class MCustomScroller extends StatelessWidget {
           new SliverFixedExtentList(
             itemExtent: 50.0,
             delegate: new SliverChildBuilderDelegate(
-                    (BuildContext context, int index) {
-                  //创建列表项
-                  return new Container(
-                    alignment: Alignment.center,
-                    color: Colors.lightBlue[100 * (index % 9)],
-                    child: new Text('list item $index'),
-                  );
-                },
-                childCount: 50 //50个列表项
-            ),
+                (BuildContext context, int index) {
+              //创建列表项
+              return new Container(
+                alignment: Alignment.center,
+                color: Colors.lightBlue[100 * (index % 9)],
+                child: new Text('list item $index'),
+              );
+            }, childCount: 50 //50个列表项
+                ),
           ),
         ],
       ),
     );
   }
 }
+
+Widget CustomScroller = Scaffold(
+  appBar: getAppBar("CustomScrollerView"),
+  body: MCustomScroller(),
+);
 
 void main() {
   runApp(MaterialApp(

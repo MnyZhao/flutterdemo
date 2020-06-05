@@ -199,7 +199,7 @@ class MTabBarState extends State<MTabBar> {
       child: Scaffold(
           appBar: AppBar(
             title: Text('TabBar $msg'),
-            bottom: TabBar(
+            bottom: TabBar(// 将tabbar 绑定到Appbar下方
               tabs: listTab,
               isScrollable: true,
               indicatorColor: Colors.red,

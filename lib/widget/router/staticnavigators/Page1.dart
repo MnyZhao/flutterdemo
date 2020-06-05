@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/defaultdemo/navigators/staticnavigators/Page2.dart';
+import 'package:flutterdemo/widget/router/staticnavigators/Page2.dart';
 
 
 void main() {

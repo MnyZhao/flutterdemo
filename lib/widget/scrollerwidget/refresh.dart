@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutterdemo/utils.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -15,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  GlobalKey<RefreshIndicatorState> _globalKey=new GlobalKey();
+  GlobalKey<RefreshIndicatorState> _globalKey = new GlobalKey();
 
   List<int> items = List.generate(16, (i) => i);
 
@@ -29,12 +30,16 @@ class MyAppState extends State<MyApp> {
       });
     });
   }
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    SchedulerBinding.instance.addPostFrameCallback((_){  _globalKey.currentState?.show(); } );
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      _globalKey.currentState?.show();
+    });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,3 +60,8 @@ class MyAppState extends State<MyApp> {
     );
   }
 }
+
+Widget refresh = Scaffold(
+  appBar: getAppBar("RefreshIndicator"),
+  body: MyApp(),
+);

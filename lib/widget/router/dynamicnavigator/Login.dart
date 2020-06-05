@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/defaultdemo/navigators/dynamicnavigator/LoginSuccess.dart';
+import 'package:flutterdemo/widget/router/dynamicnavigator/LoginSuccess.dart';
 
 class Login extends StatefulWidget {
   @override

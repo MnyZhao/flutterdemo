@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/utils.dart';
 
 /**
+ * Scrollbar 表示当前滚到什么位置即滚动时侧边的滚动条
  * SingleChildScrollView类似于Android中的ScrollView，它只能接收一个子Widget。
  */
 class MSingleChildGridView extends StatelessWidget {
@@ -36,3 +38,6 @@ void main() {
     ),
   ));
 }
+Widget SingleChildScrollAndScrollbar=Scaffold(
+  appBar: getAppBar("滚动布局和滚动条"),
+);

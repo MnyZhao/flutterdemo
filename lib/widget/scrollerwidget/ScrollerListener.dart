@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/utils.dart';
 
 class ScrollerListener extends StatefulWidget {
   @override
@@ -70,3 +71,8 @@ class scrollerState extends State<ScrollerListener> {
 void main() {
   runApp(MaterialApp(home: ScrollerListener()));
 }
+
+Widget ScrollerListen = Scaffold(
+  appBar: getAppBar("滚动监听"),
+  body: ScrollerListener(),
+);

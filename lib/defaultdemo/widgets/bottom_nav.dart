@@ -8,16 +8,12 @@ class BottomNavigation extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return BottomNavigationState(callback);
+    return BottomNavigationState();
   }
 }
 
 class BottomNavigationState extends State<BottomNavigation> {
   int _index = 0;
-  final callback;
-
-  BottomNavigationState(this.callback);
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

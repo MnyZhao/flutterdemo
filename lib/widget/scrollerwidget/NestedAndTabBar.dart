@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/utils.dart';
 
 void main() {
   runApp(new MaterialApp(
-    home: new MyApp(),
+    home: new NestedAndTabBar(),
   ));
 }
 
-class MyApp extends StatefulWidget {
+class NestedAndTabBar extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return new MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> with TickerProviderStateMixin {
+class MyAppState extends State<NestedAndTabBar> with TickerProviderStateMixin {
   final List<ListItem> listData = [];
 
   @override
@@ -116,3 +117,8 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
     return false;
   }
 }
+
+Widget NetScrollerTabBar = Scaffold(
+  appBar: getAppBar("NestedAndTabBar"),
+  body: NestedAndTabBar(),
+);

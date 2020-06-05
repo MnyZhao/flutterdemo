@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/utils.dart';
 
 void main() {
   runApp(new MaterialApp(
-    home: new MyApp(),
+    home: new NetScroller(),
   ));
 }
 
-class MyApp extends StatelessWidget {
+class NetScroller extends StatelessWidget {
   final List<ListItem> listData = [];
 
   @override
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
             SliverAppBar(
               expandedHeight: 200.0,
               floating: false,
-              pinned: true,
+              //该属性控制appbar 随着滑动 固定(true) 或者 隐藏（false）
+              pinned: false,
               flexibleSpace: FlexibleSpaceBar(
                   centerTitle: true,
                   title: Text("我是一个帅气的标题",
@@ -63,6 +65,7 @@ class ListItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 墨水点击效果
     return new InkWell(
       child: new ListTile(
         leading: new Icon(listItem.iconData),
@@ -72,3 +75,4 @@ class ListItemWidget extends StatelessWidget {
     );
   }
 }
+
