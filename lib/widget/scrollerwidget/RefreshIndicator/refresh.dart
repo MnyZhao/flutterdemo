@@ -43,9 +43,7 @@ class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Refresh"),
-      ),
+      appBar: getAppBar("RefreshIndicator"),
       body: new RefreshIndicator(
         child: ListView.builder(
           itemCount: items.length,
@@ -61,7 +59,4 @@ class MyAppState extends State<MyApp> {
   }
 }
 
-Widget refresh = Scaffold(
-  appBar: getAppBar("RefreshIndicator"),
-  body: MyApp(),
-);
+Widget refresh = MyApp();

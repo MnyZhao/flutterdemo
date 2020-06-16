@@ -31,7 +31,7 @@ class MyAppState extends State<NestedAndTabBar> with TickerProviderStateMixin {
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                   centerTitle: true,
-                  title: Text("我是一个帅气的标题",
+                  title: Text("NestedAndTabBar",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16.0,
@@ -118,7 +118,4 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   }
 }
 
-Widget NetScrollerTabBar = Scaffold(
-  appBar: getAppBar("NestedAndTabBar"),
-  body: NestedAndTabBar(),
-);
+Widget NetScrollerTabBar = NestedAndTabBar();

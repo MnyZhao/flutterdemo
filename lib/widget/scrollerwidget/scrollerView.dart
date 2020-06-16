@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/widget/scrollerwidget/CustomScroller.dart';
-import 'package:flutterdemo/widget/scrollerwidget/NestedAndTabBar.dart';
-import 'package:flutterdemo/widget/scrollerwidget/NestedScroller.dart';
+import 'file:///D:/Flutter/flutterdemo/lib/widget/scrollerwidget/CustomScrollerView/CustomScroller.dart';
+import 'file:///D:/Flutter/flutterdemo/lib/widget/scrollerwidget/nestedscroller/NestedAndTabBar.dart';
+import 'file:///D:/Flutter/flutterdemo/lib/widget/scrollerwidget/nestedscroller/NestedScroller.dart';
 import 'package:flutterdemo/widget/scrollerwidget/ScrollerListener.dart';
-import 'package:flutterdemo/widget/scrollerwidget/SingleAndScrollbar.dart';
-import 'package:flutterdemo/widget/scrollerwidget/refresh.dart';
+import 'file:///D:/Flutter/flutterdemo/lib/widget/scrollerwidget/ScrollbarAndSingleChildScrollerView/SingleAndScrollbar.dart';
+import 'file:///D:/Flutter/flutterdemo/lib/widget/scrollerwidget/RefreshIndicator/refresh.dart';
 
 import '../../utils.dart';
 import 'listview/Listandgrid_view.dart';
@@ -24,14 +24,14 @@ class ScrollerView extends StatelessWidget {
           getFlatButton(Text("PagerView"), pagelist()),
           Text("CustomScroller自定义滚动模型通过sliver来自定义滚动模型（效果）例子中是一个listview，"
               "gridview的联动效果"),
-          getFlatButton(Text("PagerView"), CustomScroller),
-          Text("嵌套滚动,内部可以嵌套其他的滚动视图 比如tabbar实现展开的tabbar 隐藏的tabbar等"),
+          getFlatButton(Text("CustomScroller"), CustomScroller),
+          Text("嵌套滚动,内部可以嵌套其他的滚动视图 常见实现展开的tabbar 隐藏的tabbar等"),
           getFlatButton(Text("NestedScroller"), NetScroller()),
-          getFlatButton(Text("NestedScroller"), NetScrollerTabBar),
+          getFlatButton(Text("NestedScrollerAndTabBar"), NetScrollerTabBar),
           Text("滑动事件监听，向上滑动显示floatingActionButton，向下收起"),
-          getFlatButton(Text("NestedScroller"), ScrollerListen),
+          getFlatButton(Text("ScrollerListener"), ScrollerListen),
           Text("SingleAndScrollbar滚动布局和滚动条"),
-          getFlatButton(Text("NestedScroller"), SingleChildScrollAndScrollbar),
+          getFlatButton(Text("SingleAndScrollbar"), SingleChildScrollAndScrollbar),
           Text("下拉刷新"),
           getFlatButton(Text("下拉刷新RefreshIndicator"),refresh),
 //          getFlatButton(Text("SingleAndScrollbar"), ),

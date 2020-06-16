@@ -16,6 +16,7 @@ class scrollerState extends State<ScrollerListener> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    // 添加监听事件
     _controller.addListener(() {
       print(_controller.offset); //打印滚动位置
       if (_controller.offset < 1000 && showToTopBtn) {
@@ -34,7 +35,7 @@ class scrollerState extends State<ScrollerListener> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(title: Text("滚动控制")),
+      appBar: getAppBar("滚动监听"),
       body: Scrollbar(
         child: ListView.builder(
             itemCount: 100,
@@ -72,7 +73,4 @@ void main() {
   runApp(MaterialApp(home: ScrollerListener()));
 }
 
-Widget ScrollerListen = Scaffold(
-  appBar: getAppBar("滚动监听"),
-  body: ScrollerListener(),
-);
+Widget ScrollerListen = ScrollerListener();
