@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutterdemo/flutter_Eventhandl_notification/event_notify_sample.dart';
 import 'package:flutterdemo/utils.dart';
-import 'package:flutterdemo/widget/basewidget/ImageAndIcon.dart';
-import 'package:flutterdemo/widget/basewidget/SwitchAndCheckBox.dart';
 
-import 'widget/basewidget/Text.dart';
-import 'widget/basewidget/TextFiledSample/TextFieldShow.dart';
-import 'widget/basewidget/TextFiledSample/TextFiled.dart';
-import 'widget/basewidget/button.dart';
-import 'widget/layoutwidget/layout.dart';
-import 'widget/scrollerwidget/scrollerView.dart';
+import 'dionet/test.dart';
+import 'flutter_animation/animation_sample.dart';
+import 'flutter_Eventhandl_notification/gesture/GestureSmaple.dart';
+import 'flutter_widget/basewidget/base.dart';
+import 'flutter_widget/bottom_tab_bar/bar.dart';
+import 'flutter_widget/click/AddClick.dart';
+import 'flutter_widget/click/MyItemWidget.dart';
+import 'flutter_widget/container_widget/containersample.dart';
+import 'flutter_widget/flutterchinasmaple/FlutterChinaLayoutClick.dart';
+import 'flutter_widget/funcation_widget/funcation_sample.dart';
+import 'flutter_widget/layoutwidget/layout.dart';
+import 'flutter_widget/router/router.dart';
+import 'flutter_widget/scrollerwidget/scrollerView.dart';
+
 
 main() => runApp(MyApp());
 
@@ -22,7 +29,9 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.redAccent, //用于导航栏、FloatingActionButton的背景色等
           iconTheme: IconThemeData(color: Colors.greenAccent), //用于Icon颜色
         ),
-        home: _homeWidget(context));
+        home: _homeWidget(context)
+    );
+
   }
 }
 
@@ -118,14 +127,19 @@ getListView() {
   return ListView(
     padding: EdgeInsets.only(left: 30, right: 30),
     children: <Widget>[
-      getFlatButton(Text("text"), MText()),
-      getFlatButton(Text("TextField(输入)"), TextFieldShow()),
-      getFlatButton(Text("按钮"), ShowButton()),
-      getFlatButton(Text("ImageAndIcon"), ImageAndIconWidget()),
-      getFlatButton(Text("SwitchAndCheckBox"), SwitchAndCheckBox()),
+      getFlatButton(Text("基础组件"), BaseWidget()),
+      getFlatButton(Text("容器组件"), ContainerSample()),
+      getFlatButton(Text("滚动组件"), ScrollerView()),
+      getFlatButton(Text("功能组件"), FuncationSample()),
       getFlatButton(Text("布局"), Layout()),
-      getFlatButton(Text("滑动列表"), ScrollerView()),
-
+      getFlatButton(Text("路由跳转"), Router()),
+      getFlatButton(Text("导航栏"), ShowBar()),
+      getFlatButton(Text("事件处理与通知"), EventNotifySample()),
+      getFlatButton(Text("点击事件添加"), ClickSample()),
+      getFlatButton(Text("点击水波纹InkWell"), inkwellSmaple),
+      getFlatButton(Text("动画"), AnimationSample()),
+      getFlatButton(Text("flutter中文网布局示例"), ChinaLayoutSmaple),
+      getFlatButton(Text("flutter中文网布局示例"), TestHttp()),
     ],
   );
 }

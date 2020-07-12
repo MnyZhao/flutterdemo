@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 Builder getFlatButton(
-    Widget child,
-    Widget skipRoutr, {
-      Color color = Colors.redAccent,
-      Color highlightColor = Colors.red,
-      Color splashColor = Colors.grey,
-    }) {
+  Widget child,
+  Widget skipRoutr, {
+  Color color = Colors.redAccent,
+  Color highlightColor = Colors.red,
+  Color splashColor = Colors.grey,
+}) {
   return Builder(builder: (BuildContext context) {
     return FlatButton(
       color: color,
@@ -32,6 +32,7 @@ getRouter(Widget widget) {
     return widget; //路由B
   });
 }
-getAppBar(String titlemsg){
+
+getAppBar(String titlemsg) {
   return AppBar(title: Text(titlemsg));
 }

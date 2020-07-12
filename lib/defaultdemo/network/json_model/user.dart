@@ -17,7 +17,7 @@ class User {
 }
 
 void main() {
-  String jsonList = '[{"name":"Jack"},{"name":"John"}]';
+  String jsonList = '[{"name":"Jack","email":"sdf"},{"name":"John"}]';
   List<dynamic> user = json.decode(jsonList);
   user.forEach((f) => print(f['name']));
 

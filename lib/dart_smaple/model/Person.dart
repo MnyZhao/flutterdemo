@@ -63,8 +63,21 @@ class Point {
   Point.alongXAxis(num x) : this(x, 0);
 }
 
+class TestGetSet {
+  num x;
+  num y;
+
+  num get getX {
+    return this.x + 1;
+  }
+  set setX(num x) {
+    this.x = x + 1;
+  }
+}
+
 void main() {
-  new Person.fromDictionary({'age': 10, "name": "sss"});
-  new ImmutablePoint(1, 2);
-  new Point.alongXAxis(12);
+//  new Person.fromDictionary({'age': 10, "name": "sss"});
+//  new ImmutablePoint(1, 2);
+//  new Point.alongXAxis(12);
+
 }

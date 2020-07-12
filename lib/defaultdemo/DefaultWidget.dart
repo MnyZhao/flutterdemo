@@ -49,6 +49,7 @@ class MyScaffold extends StatelessWidget {
           MyAppBar(
               title: Text('title', style: Theme.of(context).primaryTextTheme.title)),
           new Expanded(
+            flex: 1,
             child: new Center(
               child: new Text('Hello, world!'),
             ),

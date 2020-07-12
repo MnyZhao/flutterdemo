@@ -27,7 +27,7 @@ void main() {
    */
   var x = subMake(5); //得到subMake方法对象
   print(x(2)); //subMake对象调用里面n-i的方法
-  print('>>>>>>>>>>>>>>>将函数作为对象传递给函数');
+  print('>>>>>>>>>>>>>>>将函数作为对象传递给函数 函数参数');
   /*再dart中任何类型都是对象 函数也是对象*/
   var callbacks = [];
   for (int i = 0; i < 3; i++) {
@@ -46,7 +46,9 @@ void main() {
 
   var list1 = ['1', '2', '3'];
   list1.forEach(printElemet);
-
+  // 函数参数测试
+  var i = check(2, 1, f: sub);
+  print(i);
   print('>>>>>>>>>>>>>>>可选命名参数');
   /*可选命名参数*/
   enableFlags(param1: true, param3: 3);
@@ -134,4 +136,10 @@ void doStuff(
     }}) {
   print('list: $list');
   print('gifts:$gifts');
+}
+
+int sub(int x, int y) => x - y;
+
+int check(int x, y, {Function(int x, int y) f}) {
+  return f(x, y);
 }
